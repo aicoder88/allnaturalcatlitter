@@ -13,7 +13,7 @@ interface Props {
 const {
   title,
   description = 'Welcome to your wellness journey with all natural cat litter. Discover holistic, toxin-free litter solutions that nurture both your cat and your home sanctuary.',
-  ogImage = '/og-image.jpg',
+  ogImage = '/og-image.svg',
   currentPath = Astro.url.pathname,
 } = Astro.props;
 
@@ -51,7 +51,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://allnatur
     <meta name="twitter:image" content={ogImage} />
 
     <!-- Schema.org -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": siteName,
@@ -62,7 +62,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://allnatur
         "name": siteName,
         "logo": {
           "@type": "ImageObject",
-          "url": "https://allnaturalcatlitter.com/logo.png"
+          "url": "https://allnaturalcatlitter.com/logo.svg"
         }
       }
     })} />
