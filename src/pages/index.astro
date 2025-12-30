@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import OrganicHero from '../components/OrganicHero.astro';
+import JourneyCard from '../components/JourneyCard.astro';
+import WellnessQuote from '../components/WellnessQuote.astro';
+import NaturalCTA from '../components/NaturalCTA.astro';
+import BreathingSpace from '../components/BreathingSpace.astro';
+---
+
+<BaseLayout
+  title="Home"
+  description="Welcome to your wellness journey with all natural cat litter. Discover holistic, toxin-free litter solutions that nurture both your cat and your home sanctuary."
+>
+  <!-- Hero Section -->
+  <OrganicHero
+    title="Welcome to Your Wellness Journey"
+    subtitle="When we invite a cat into our home, we're not just adopting a pet—we're welcoming a companion on our wellness journey. The choices we make for their environment ripple outward, touching every corner of our shared space."
+    ctaText="Explore The Natural Path"
+    ctaHref="/the-natural-path"
+  />
+
+  <!-- Philosophy Preview Section -->
+  <section class="breathing-space-sm bg-white">
+    <div class="container-wide">
+      <div class="text-center mb-12">
+        <span class="text-sm uppercase tracking-widest text-sage mb-4 block">Our Philosophy</span>
+        <h2 class="text-heading text-earth mb-4">Living in Harmony</h2>
+        <p class="text-body text-earth-light max-w-2xl mx-auto">
+          Natural living isn't just a trend—it's a return to what our bodies and our pets instinctively know.
+          A toxin-free home creates space for true wellness to flourish.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 rounded-full bg-sage/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🌿</span>
+          </div>
+          <h3 class="font-display text-lg text-earth mb-2">Natural Harmony</h3>
+          <p class="text-body-sm text-earth-light">
+            Every ingredient matters. We believe in solutions that work with nature, not against it.
+          </p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-16 h-16 rounded-full bg-terracotta/10 flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🏡</span>
+          </div>
+          <h3 class="font-display text-lg text-earth mb-2">Sanctuary Living</h3>
+          <p class="text-body-sm text-earth-light">
+            Your home is your sanctuary. The products you choose shape its energy and atmosphere.
+          </p>
+        </div>
+
+        <div class="text-center p-6">
+          <div class="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🐱</span>
+          </div>
+          <h3 class="font-display text-lg text-earth mb-2">Mindful Care</h3>
+          <p class="text-body-sm text-earth-light">
+            Cat care becomes self-care when we approach it with intention and awareness.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/philosophy" class="btn-secondary">
+          Discover Our Philosophy
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <BreathingSpace size="md" withLine withIcon icon="❀" />
+
+  <!-- Journey Cards Section -->
+  <section class="container-wide pb-16">
+    <div class="text-center mb-12">
+      <span class="text-sm uppercase tracking-widest text-sage mb-4 block">Explore</span>
+      <h2 class="text-heading text-earth mb-4">The Natural Path</h2>
+      <p class="text-body text-earth-light max-w-xl mx-auto">
+        Begin your exploration with these mindful guides to natural cat litter and holistic living.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <JourneyCard
+        title="The Journey to Toxin-Free Living"
+        description="Discover why conventional cat litter may be harming your home's energy, and how natural alternatives create a healthier sanctuary for you and your cat."
+        href="/the-natural-path/toxin-free-living"
+        icon="🌱"
+        readingTime="8 min"
+      />
+
+      <JourneyCard
+        title="Understanding Natural Ingredients"
+        description="A contemplative exploration of the materials that make up natural litters—corn, wheat, pine, coconut, and more—and their unique qualities."
+        href="/the-natural-path/natural-ingredients"
+        icon="🌾"
+        readingTime="6 min"
+      />
+
+      <JourneyCard
+        title="Nurturing Your Cat's Instincts"
+        description="Cats are intuitive creatures. Learn how natural litter supports their innate behaviors and promotes their physical and emotional wellness."
+        href="/the-natural-path/nurturing-instincts"
+        icon="🐾"
+        readingTime="7 min"
+      />
+    </div>
+  </section>
+
+  <BreathingSpace size="sm" />
+
+  <!-- Wellness Quote -->
+  <section class="bg-mist py-12 md:py-16">
+    <div class="container-narrow">
+      <WellnessQuote
+        quote="The choices we make for our animal companions reflect the choices we make for ourselves. Natural living begins with awareness, and awareness leads to transformation."
+      />
+    </div>
+  </section>
+
+  <BreathingSpace size="md" />
+
+  <!-- Purrify Recommendation Section -->
+  <section class="container-wide pb-16">
+    <NaturalCTA
+      title="A Gentle Recommendation"
+      description="In our journey toward natural living, we discovered Purrify—an activated carbon solution derived from coconuts that aligns beautifully with holistic principles. It works in harmony with any natural litter to eliminate odors without harsh chemicals."
+      ctaText="Discover Purrify"
+      ctaHref="https://purrify.ca?utm_source=allnaturalcatlitter&utm_medium=homepage"
+      variant="sage"
+      external={true}
+    />
+  </section>
+
+  <BreathingSpace size="md" withLine withIcon icon="✦" />
+
+  <!-- Community Section -->
+  <section class="container-narrow text-center pb-20">
+    <span class="text-sm uppercase tracking-widest text-sage mb-4 block">Community</span>
+    <h2 class="text-heading text-earth mb-4">Join Our Journey</h2>
+    <p class="text-body text-earth-light max-w-lg mx-auto mb-8">
+      Connect with fellow guardians who embrace natural living for their feline companions.
+      Receive gentle reflections and practical wisdom in your inbox.
+    </p>
+    <a href="/community" class="btn-primary">
+      Join the Community
+    </a>
+  </section>
+</BaseLayout>

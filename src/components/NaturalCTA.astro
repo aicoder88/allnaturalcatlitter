@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaHref: string;
+  variant?: 'sage' | 'sand' | 'earth';
+  external?: boolean;
+}
+
+const {
+  title,
+  description,
+  ctaText,
+  ctaHref,
+  variant = 'sage',
+  external = false,
+} = Astro.props;
+
+const bgClasses = {
+  sage: 'bg-sage/10',
+  sand: 'bg-sand',
+  earth: 'bg-earth text-cream',
+};
+
+const textClasses = {
+  sage: 'text-earth',
+  sand: 'text-earth',
+  earth: 'text-cream',
+};
+---
+
+<section class={`rounded-3xl p-8 md:p-12 ${bgClasses[variant]}`}>
+  <div class="max-w-2xl mx-auto text-center">
+    <!-- Decorative Icon -->
+    <div class="mb-6">
+      <span class="inline-block w-12 h-12 rounded-full bg-white/50 flex items-center justify-center text-2xl">
+        🌿
+      </span>
+    </div>
+
+    <!-- Title -->
+    <h2 class={`font-display text-2xl md:text-3xl mb-4 ${textClasses[variant]}`}>
+      {title}
+    </h2>
+
+    <!-- Description -->
+    <p class={`text-body mb-8 leading-generous ${variant === 'earth' ? 'text-cream/80' : 'text-earth-light'}`}>
+      {description}
+    </p>
+
+    <!-- CTA Button -->
+    <a
+      href={ctaHref}
+      class={variant === 'earth' ? 'btn-gentle' : 'btn-primary'}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener' : undefined}
+    >
+      {ctaText}
+    </a>
+  </div>
+</section>

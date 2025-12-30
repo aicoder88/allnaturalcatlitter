@@ -1,0 +1,63 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-mist border-t border-sand/30">
+  <div class="container-wide py-16 md:py-20">
+    <!-- Main Footer Content -->
+    <div class="grid md:grid-cols-3 gap-12 md:gap-8 mb-12">
+      <!-- Brand Column -->
+      <div class="md:col-span-1">
+        <a href="/" class="flex items-center gap-3 no-underline mb-4">
+          <span class="text-2xl">🌿</span>
+          <span class="font-display text-xl text-earth">All Natural Cat Litter</span>
+        </a>
+        <p class="text-body-sm text-earth-light leading-generous max-w-xs">
+          Nurturing the wellness journey for you and your feline companion.
+          Embracing natural living, one litter box at a time.
+        </p>
+      </div>
+
+      <!-- Navigation Column -->
+      <div>
+        <h3 class="font-display text-lg text-earth mb-4">Explore</h3>
+        <nav class="flex flex-col gap-3" aria-label="Footer navigation">
+          <a href="/philosophy" class="text-earth-light hover:text-sage no-underline">Our Philosophy</a>
+          <a href="/the-natural-path" class="text-earth-light hover:text-sage no-underline">The Natural Path</a>
+          <a href="/recommendations" class="text-earth-light hover:text-sage no-underline">Recommendations</a>
+          <a href="/community" class="text-earth-light hover:text-sage no-underline">Join Our Community</a>
+        </nav>
+      </div>
+
+      <!-- Wellness Partner Column -->
+      <div>
+        <h3 class="font-display text-lg text-earth mb-4">Wellness Partner</h3>
+        <p class="text-body-sm text-earth-light leading-generous mb-4">
+          Discover Purrify—a natural, activated carbon solution that aligns
+          with holistic living principles.
+        </p>
+        <a
+          href="https://purrify.ca?utm_source=allnaturalcatlitter&utm_medium=footer"
+          class="btn-gentle text-sm"
+          target="_blank"
+          rel="noopener"
+        >
+          Explore Purrify
+        </a>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-px bg-sand/50 mb-8"></div>
+
+    <!-- Bottom Row -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-earth-light">
+      <p>&copy; {currentYear} All Natural Cat Litter. All rights reserved.</p>
+      <p class="flex items-center gap-2">
+        <span>Made with</span>
+        <span class="text-sage">&#x2661;</span>
+        <span>for mindful cat guardians</span>
+      </p>
+    </div>
+  </div>
+</footer>

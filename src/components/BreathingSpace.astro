@@ -1,0 +1,29 @@
+---
+interface Props {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  withLine?: boolean;
+  withIcon?: boolean;
+  icon?: string;
+}
+
+const { size = 'md', withLine = false, withIcon = false, icon = '✦' } = Astro.props;
+
+const sizeClasses = {
+  sm: 'py-8 md:py-12',
+  md: 'py-12 md:py-16',
+  lg: 'py-16 md:py-24',
+  xl: 'py-24 md:py-32',
+};
+---
+
+<div class={`${sizeClasses[size]} flex items-center justify-center`} aria-hidden="true">
+  {withLine ? (
+    <div class="w-full max-w-xs flex items-center gap-4">
+      <div class="flex-1 h-px bg-gradient-to-r from-transparent via-sand to-transparent"></div>
+      {withIcon && <span class="text-sage/40">{icon}</span>}
+      <div class="flex-1 h-px bg-gradient-to-r from-transparent via-sand to-transparent"></div>
+    </div>
+  ) : withIcon ? (
+    <span class="text-sage/40 text-lg">{icon}</span>
+  ) : null}
+</div>

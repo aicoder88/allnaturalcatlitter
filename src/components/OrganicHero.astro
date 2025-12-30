@@ -1,0 +1,92 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  showCta?: boolean;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  title,
+  subtitle,
+  showCta = true,
+  ctaText = 'Begin Your Journey',
+  ctaHref = '/the-natural-path',
+} = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-gradient-to-b from-mist via-cream to-cream">
+  <!-- Organic background shapes -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div class="absolute -top-20 -right-20 w-80 h-80 bg-sage/10 organic-border animate-float"></div>
+    <div class="absolute top-1/2 -left-32 w-64 h-64 bg-terracotta/10 organic-border-alt animate-float-delayed"></div>
+    <div class="absolute bottom-20 right-1/4 w-40 h-40 bg-gold/15 rounded-full animate-pulse-slow"></div>
+  </div>
+
+  <div class="container-narrow relative z-10 text-center breathing-space">
+    <!-- Welcome Icon -->
+    <div class="mb-8">
+      <span class="inline-block text-5xl md:text-6xl animate-gentle-bounce">🌱</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-display text-earth mb-6">
+      {title}
+    </h1>
+
+    <!-- Subtitle -->
+    {subtitle && (
+      <p class="text-body text-earth-light max-w-xl mx-auto mb-10 leading-generous">
+        {subtitle}
+      </p>
+    )}
+
+    <!-- CTA -->
+    {showCta && (
+      <a href={ctaHref} class="btn-primary">
+        {ctaText}
+      </a>
+    )}
+
+    <!-- Scroll Indicator -->
+    <div class="mt-16 animate-bounce-slow">
+      <svg class="w-6 h-6 mx-auto text-sage/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(-5deg); }
+  }
+
+  @keyframes gentle-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(8px); opacity: 1; }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.15; transform: scale(1); }
+    50% { opacity: 0.25; transform: scale(1.05); }
+  }
+
+  .animate-float { animation: float 8s ease-in-out infinite; }
+  .animate-float-delayed { animation: float-delayed 10s ease-in-out infinite; animation-delay: 1s; }
+  .animate-gentle-bounce { animation: gentle-bounce 3s ease-in-out infinite; }
+  .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+  .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+</style>

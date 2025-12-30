@@ -1,0 +1,137 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BreathingSpace from '../components/BreathingSpace.astro';
+import NaturalCTA from '../components/NaturalCTA.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  readingTime?: string;
+  icon?: string;
+}
+
+const { title, description, readingTime = '5 min', icon = '🌿' } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Journey Hero -->
+  <section class="bg-gradient-to-b from-mist to-cream py-16 md:py-24">
+    <div class="container-narrow text-center">
+      <a href="/the-natural-path" class="text-sm text-sage hover:text-sage-dark transition-colors mb-6 inline-block">
+        ← Back to The Natural Path
+      </a>
+
+      <div class="mb-6">
+        <span class="text-5xl">{icon}</span>
+      </div>
+
+      <h1 class="text-display text-earth mb-6">
+        {title}
+      </h1>
+
+      <p class="text-body text-earth-light max-w-xl mx-auto leading-generous mb-6">
+        {description}
+      </p>
+
+      <span class="text-sm text-earth-light/70">{readingTime} reflection</span>
+    </div>
+  </section>
+
+  <!-- Journey Content -->
+  <article class="container-narrow py-16">
+    <div class="prose prose-lg max-w-none">
+      <slot />
+    </div>
+  </article>
+
+  <BreathingSpace size="md" withLine withIcon icon="❀" />
+
+  <!-- Purrify CTA -->
+  <section class="container-wide py-16">
+    <NaturalCTA
+      title="Continue Your Natural Journey"
+      description="Discover how Purrify's coconut-derived activated carbon can enhance your natural litter routine. Gentle, effective, and aligned with holistic living."
+      ctaText="Explore Purrify"
+      ctaHref="https://purrify.ca?utm_source=allnaturalcatlitter&utm_medium=journey-article"
+      variant="sage"
+      external={true}
+    />
+  </section>
+
+  <BreathingSpace size="md" />
+
+  <!-- More Journeys -->
+  <section class="container-narrow text-center pb-20">
+    <h2 class="font-display text-xl text-earth mb-4">Continue Exploring</h2>
+    <p class="text-body-sm text-earth-light mb-8">
+      Discover more mindful guides on The Natural Path.
+    </p>
+    <a href="/the-natural-path" class="btn-secondary">
+      View All Journeys
+    </a>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  article.prose h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.75rem;
+    color: #5C4B3A;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  article.prose h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.25rem;
+    color: #5C4B3A;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  article.prose p {
+    font-family: 'Karla', sans-serif;
+    color: #7A6652;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+  }
+
+  article.prose em {
+    color: #87A878;
+    font-style: italic;
+  }
+
+  article.prose strong {
+    color: #5C4B3A;
+    font-weight: 600;
+  }
+
+  article.prose ul, article.prose ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  article.prose li {
+    color: #7A6652;
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  article.prose blockquote {
+    border-left: 3px solid #87A878;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #5C4B3A;
+  }
+
+  article.prose a {
+    color: #87A878;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  article.prose a:hover {
+    color: #6B8C5E;
+  }
+</style>

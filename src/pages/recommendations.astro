@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreathingSpace from '../components/BreathingSpace.astro';
+import WellnessQuote from '../components/WellnessQuote.astro';
+import NaturalCTA from '../components/NaturalCTA.astro';
+---
+
+<BaseLayout
+  title="Gentle Recommendations"
+  description="Thoughtfully curated recommendations for natural cat litter solutions. We share only what aligns with our philosophy of holistic, toxin-free living."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-mist to-cream breathing-space text-center">
+    <div class="container-narrow">
+      <span class="text-sm uppercase tracking-widest text-sage mb-4 block">Recommendations</span>
+      <h1 class="text-display text-earth mb-6">
+        Gentle Suggestions
+      </h1>
+      <p class="text-body text-earth-light max-w-xl mx-auto leading-generous">
+        We don't believe in hard selling or pressure. These are simply the products
+        we've discovered on our own wellness journey—ones that align with our philosophy
+        of natural, mindful cat care.
+      </p>
+    </div>
+  </section>
+
+  <!-- Philosophy of Recommendations -->
+  <section class="container-narrow py-16">
+    <article class="prose max-w-none">
+      <h2 class="font-display text-2xl text-earth mb-6">Our Approach to Recommendations</h2>
+      <p class="text-body text-earth-light mb-6 leading-generous">
+        In a world of endless product options and aggressive marketing, we take a different
+        approach. We recommend only what we would use ourselves—products that honor
+        both the wellness of your cat and the harmony of your home.
+      </p>
+      <p class="text-body text-earth-light mb-8 leading-generous">
+        Our suggestions are based on natural ingredients, gentle effectiveness, and
+        alignment with holistic living principles. We value quality over quantity,
+        simplicity over complexity.
+      </p>
+    </article>
+  </section>
+
+  <BreathingSpace size="sm" withLine withIcon icon="✦" />
+
+  <!-- Featured Recommendation -->
+  <section class="container-wide py-16">
+    <div class="text-center mb-12">
+      <span class="text-sm uppercase tracking-widest text-sage mb-4 block">Featured</span>
+      <h2 class="text-heading text-earth mb-4">Our Primary Recommendation</h2>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-lg overflow-hidden max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2">
+        <!-- Image Placeholder -->
+        <div class="bg-sage/10 flex items-center justify-center p-12">
+          <div class="text-center">
+            <span class="text-6xl mb-4 block">🌿</span>
+            <span class="font-display text-2xl text-sage">Purrify</span>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-8 md:p-10">
+          <span class="text-xs uppercase tracking-widest text-terracotta mb-2 block">Activated Carbon Additive</span>
+          <h3 class="font-display text-2xl text-earth mb-4">Purrify Natural Litter Enhancer</h3>
+          <p class="text-body-sm text-earth-light mb-6 leading-generous">
+            Derived from coconut shells, Purrify's activated carbon works with any natural litter
+            to eliminate odors at the molecular level. No synthetic fragrances, no chemicals—just
+            the power of nature.
+          </p>
+
+          <div class="space-y-3 mb-8">
+            <div class="flex items-start gap-3">
+              <span class="text-sage mt-1">✓</span>
+              <span class="text-body-sm text-earth-light">100% natural coconut-derived activated carbon</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-sage mt-1">✓</span>
+              <span class="text-body-sm text-earth-light">Works with any litter—natural or traditional</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-sage mt-1">✓</span>
+              <span class="text-body-sm text-earth-light">Safe for cats, humans, and the environment</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-sage mt-1">✓</span>
+              <span class="text-body-sm text-earth-light">Extends litter life naturally</span>
+            </div>
+          </div>
+
+          <a
+            href="https://purrify.ca?utm_source=allnaturalcatlitter&utm_medium=recommendations"
+            class="btn-primary"
+            target="_blank"
+            rel="noopener"
+          >
+            Learn About Purrify
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <BreathingSpace size="md" />
+
+  <!-- Quote -->
+  <section class="bg-sand/30 py-16">
+    <div class="container-narrow">
+      <WellnessQuote
+        quote="The best products are those that work so naturally, so gently, that we barely notice them doing their work. They integrate seamlessly into our lives."
+      />
+    </div>
+  </section>
+
+  <BreathingSpace size="md" />
+
+  <!-- Natural Litter Types -->
+  <section class="container-wide py-16">
+    <div class="text-center mb-12">
+      <span class="text-sm uppercase tracking-widest text-sage mb-4 block">Natural Litter Types</span>
+      <h2 class="text-heading text-earth mb-4">Choosing Your Base Litter</h2>
+      <p class="text-body text-earth-light max-w-xl mx-auto">
+        Purrify works beautifully with any natural litter. Here's a gentle overview
+        of the options available to you.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Corn -->
+      <div class="card-journey">
+        <span class="text-3xl mb-4 block">🌽</span>
+        <h3 class="font-display text-lg text-earth mb-2">Corn-Based</h3>
+        <p class="text-body-sm text-earth-light">
+          Excellent clumping, lightweight, and compostable. A popular choice for
+          those new to natural litter.
+        </p>
+      </div>
+
+      <!-- Wheat -->
+      <div class="card-journey">
+        <span class="text-3xl mb-4 block">🌾</span>
+        <h3 class="font-display text-lg text-earth mb-2">Wheat-Based</h3>
+        <p class="text-body-sm text-earth-light">
+          Natural enzymes help control odor. Soft texture that many cats prefer.
+          Flushable in most systems.
+        </p>
+      </div>
+
+      <!-- Pine -->
+      <div class="card-journey">
+        <span class="text-3xl mb-4 block">🌲</span>
+        <h3 class="font-display text-lg text-earth mb-2">Pine-Based</h3>
+        <p class="text-body-sm text-earth-light">
+          Natural pine scent provides inherent odor control. Available in pellets
+          or shavings. Highly absorbent.
+        </p>
+      </div>
+
+      <!-- Walnut -->
+      <div class="card-journey">
+        <span class="text-3xl mb-4 block">🌰</span>
+        <h3 class="font-display text-lg text-earth mb-2">Walnut Shell</h3>
+        <p class="text-body-sm text-earth-light">
+          Dark color hides mess naturally. Strong clumping and excellent odor
+          absorption. Low dust.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <BreathingSpace size="md" withLine withIcon icon="❀" />
+
+  <!-- Final CTA -->
+  <section class="container-wide py-16">
+    <NaturalCTA
+      title="Begin Your Natural Journey"
+      description="Ready to bring more harmony into your cat care routine? Start with Purrify and experience the difference natural solutions can make."
+      ctaText="Visit Purrify"
+      ctaHref="https://purrify.ca/products?utm_source=allnaturalcatlitter&utm_medium=recommendations-bottom"
+      variant="sage"
+      external={true}
+    />
+  </section>
+
+  <BreathingSpace size="lg" />
+
+  <!-- Link to Philosophy -->
+  <section class="container-narrow text-center pb-20">
+    <p class="text-body-sm text-earth-light mb-4">
+      Want to understand why we recommend what we do?
+    </p>
+    <a href="/philosophy" class="text-sage font-medium hover:text-sage-dark transition-colors">
+      Explore Our Philosophy →
+    </a>
+  </section>
+</BaseLayout>

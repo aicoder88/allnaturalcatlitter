@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreathingSpace from '../components/BreathingSpace.astro';
+import WellnessQuote from '../components/WellnessQuote.astro';
+---
+
+<BaseLayout
+  title="Community"
+  description="Join our community of mindful cat guardians embracing natural living. Receive gentle reflections, practical wisdom, and new journey guides in your inbox."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-mist to-cream breathing-space text-center">
+    <div class="container-narrow">
+      <span class="text-sm uppercase tracking-widest text-sage mb-4 block">Community</span>
+      <h1 class="text-display text-earth mb-6">
+        Join Our Journey
+      </h1>
+      <p class="text-body text-earth-light max-w-xl mx-auto leading-generous">
+        Connect with fellow guardians who embrace natural living for their feline companions.
+        Together, we explore the path to holistic, mindful cat care.
+      </p>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="container-narrow py-16">
+    <div class="bg-white rounded-3xl shadow-lg p-8 md:p-12 text-center">
+      <div class="w-20 h-20 rounded-full bg-sage/10 flex items-center justify-center mx-auto mb-6">
+        <span class="text-4xl">✉️</span>
+      </div>
+
+      <h2 class="font-display text-2xl text-earth mb-4">
+        Receive Gentle Reflections
+      </h2>
+
+      <p class="text-body text-earth-light max-w-md mx-auto mb-8 leading-generous">
+        Our newsletter isn't about sales or promotions. It's a quiet space for sharing
+        insights, new journeys, and thoughtful perspectives on natural cat care.
+      </p>
+
+      <!-- Newsletter Form (placeholder - would need actual form integration) -->
+      <form class="max-w-md mx-auto" action="#" method="POST">
+        <div class="flex flex-col sm:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="Your email address"
+            required
+            class="flex-1 px-6 py-4 rounded-full border border-sand focus:border-sage focus:outline-none text-earth bg-cream"
+          />
+          <button
+            type="submit"
+            class="btn-primary whitespace-nowrap"
+          >
+            Join Us
+          </button>
+        </div>
+        <p class="text-sm text-earth-light/70 mt-4">
+          We respect your inbox. Expect gentle, occasional reflections—never spam.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <BreathingSpace size="md" withLine withIcon icon="❀" />
+
+  <!-- What You'll Receive -->
+  <section class="container-wide py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-heading text-earth mb-4">What You'll Receive</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-full bg-mist flex items-center justify-center mx-auto mb-4">
+          <span class="text-2xl">🌿</span>
+        </div>
+        <h3 class="font-display text-lg text-earth mb-2">New Journeys</h3>
+        <p class="text-body-sm text-earth-light">
+          Be the first to explore new guides and reflections on The Natural Path.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-full bg-mist flex items-center justify-center mx-auto mb-4">
+          <span class="text-2xl">💭</span>
+        </div>
+        <h3 class="font-display text-lg text-earth mb-2">Mindful Insights</h3>
+        <p class="text-body-sm text-earth-light">
+          Gentle observations on wellness, cat care, and living in harmony with nature.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 rounded-full bg-mist flex items-center justify-center mx-auto mb-4">
+          <span class="text-2xl">🌱</span>
+        </div>
+        <h3 class="font-display text-lg text-earth mb-2">Practical Wisdom</h3>
+        <p class="text-body-sm text-earth-light">
+          Tips and approaches for transitioning to natural litter and mindful care.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <BreathingSpace size="md" />
+
+  <!-- Quote -->
+  <section class="bg-sage/10 py-16">
+    <div class="container-narrow">
+      <WellnessQuote
+        quote="Community isn't about gathering many people—it's about gathering the right people. Those who share our values, our intentions, our care for the creatures who grace our lives."
+      />
+    </div>
+  </section>
+
+  <BreathingSpace size="md" />
+
+  <!-- Values Section -->
+  <section class="container-narrow py-16">
+    <h2 class="font-display text-2xl text-earth text-center mb-10">Our Community Values</h2>
+
+    <div class="space-y-8">
+      <div class="flex gap-6 items-start">
+        <div class="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center flex-shrink-0">
+          <span class="text-xl">🕊️</span>
+        </div>
+        <div>
+          <h3 class="font-display text-lg text-earth mb-2">Gentleness Over Aggression</h3>
+          <p class="text-body-sm text-earth-light leading-generous">
+            We never push or pressure. Our recommendations are gentle suggestions, not demands.
+            Every guardian knows their cat best.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-6 items-start">
+        <div class="w-12 h-12 rounded-full bg-terracotta/10 flex items-center justify-center flex-shrink-0">
+          <span class="text-xl">🌍</span>
+        </div>
+        <div>
+          <h3 class="font-display text-lg text-earth mb-2">Connection Over Competition</h3>
+          <p class="text-body-sm text-earth-light leading-generous">
+            We lift each other up. There's no "best" way to care for a cat—only the way that
+            works for your unique household.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-6 items-start">
+        <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+          <span class="text-xl">✨</span>
+        </div>
+        <div>
+          <h3 class="font-display text-lg text-earth mb-2">Progress Over Perfection</h3>
+          <p class="text-body-sm text-earth-light leading-generous">
+            Natural living is a journey, not a destination. Every small step toward wellness
+            matters, regardless of where you're starting from.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <BreathingSpace size="md" withLine withIcon icon="✦" />
+
+  <!-- Final CTA -->
+  <section class="container-narrow text-center pb-20">
+    <h2 class="font-display text-xl text-earth mb-4">Ready to Begin?</h2>
+    <p class="text-body-sm text-earth-light max-w-md mx-auto mb-8">
+      Start exploring our guides and discover the natural path to mindful cat care.
+    </p>
+    <a href="/the-natural-path" class="btn-primary">
+      Explore The Natural Path
+    </a>
+  </section>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+interface Props {
+  quote: string;
+  author?: string;
+  centered?: boolean;
+}
+
+const { quote, author, centered = true } = Astro.props;
+---
+
+<blockquote class={`relative py-12 md:py-16 ${centered ? 'text-center' : ''}`}>
+  <!-- Decorative elements -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 text-sage/20 text-6xl font-display" aria-hidden="true">
+    "
+  </div>
+
+  <!-- Quote text -->
+  <p class="font-display text-xl md:text-2xl lg:text-3xl text-earth leading-relaxed max-w-3xl mx-auto italic">
+    {quote}
+  </p>
+
+  <!-- Author -->
+  {author && (
+    <footer class="mt-6">
+      <cite class="not-italic text-sm text-earth-light">— {author}</cite>
+    </footer>
+  )}
+</blockquote>

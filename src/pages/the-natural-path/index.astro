@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JourneyCard from '../../components/JourneyCard.astro';
+import BreathingSpace from '../../components/BreathingSpace.astro';
+import WellnessQuote from '../../components/WellnessQuote.astro';
+
+const journeys = [
+  {
+    title: "The Journey to Toxin-Free Living",
+    description: "Discover why conventional cat litter may be harming your home's energy, and how natural alternatives create a healthier sanctuary for you and your cat.",
+    href: "/the-natural-path/toxin-free-living",
+    icon: "🌱",
+    readingTime: "8 min",
+  },
+  {
+    title: "Understanding Natural Ingredients",
+    description: "A contemplative exploration of the materials that make up natural litters—corn, wheat, pine, coconut, and more—and their unique qualities.",
+    href: "/the-natural-path/natural-ingredients",
+    icon: "🌾",
+    readingTime: "6 min",
+  },
+  {
+    title: "Nurturing Your Cat's Instincts",
+    description: "Cats are intuitive creatures. Learn how natural litter supports their innate behaviors and promotes their physical and emotional wellness.",
+    href: "/the-natural-path/nurturing-instincts",
+    icon: "🐾",
+    readingTime: "7 min",
+  },
+  {
+    title: "The Transition Journey",
+    description: "Gently guide your cat from conventional to natural litter. A patient, mindful approach to making this important change for your household.",
+    href: "/the-natural-path/transition-journey",
+    icon: "🦋",
+    readingTime: "5 min",
+  },
+  {
+    title: "Creating Your Litter Box Sanctuary",
+    description: "Transform the litter box area from a necessary chore into a peaceful corner of your home. Placement, accessories, and mindful maintenance.",
+    href: "/the-natural-path/litter-box-sanctuary",
+    icon: "🏡",
+    readingTime: "6 min",
+  },
+  {
+    title: "Multi-Cat Harmony",
+    description: "When multiple cats share a home, their needs multiply. Discover how natural litter supports peaceful coexistence and individual wellness.",
+    href: "/the-natural-path/multi-cat-harmony",
+    icon: "🐱",
+    readingTime: "7 min",
+  },
+];
+---
+
+<BaseLayout
+  title="The Natural Path"
+  description="Explore our collection of mindful guides to natural cat litter and holistic living. Begin your journey toward toxin-free, harmonious cat care."
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-mist to-cream breathing-space text-center">
+    <div class="container-narrow">
+      <span class="text-sm uppercase tracking-widest text-sage mb-4 block">Explore</span>
+      <h1 class="text-display text-earth mb-6">
+        The Natural Path
+      </h1>
+      <p class="text-body text-earth-light max-w-xl mx-auto leading-generous">
+        A collection of contemplative journeys into natural cat litter, mindful pet care,
+        and creating a sanctuary space for you and your feline companion.
+      </p>
+    </div>
+  </section>
+
+  <!-- Journeys Grid -->
+  <section class="container-wide py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {journeys.map((journey) => (
+        <JourneyCard
+          title={journey.title}
+          description={journey.description}
+          href={journey.href}
+          icon={journey.icon}
+          readingTime={journey.readingTime}
+        />
+      ))}
+    </div>
+  </section>
+
+  <BreathingSpace size="md" withLine withIcon icon="❀" />
+
+  <!-- Quote -->
+  <section class="bg-white py-16">
+    <div class="container-narrow">
+      <WellnessQuote
+        quote="The path to natural living isn't about perfection—it's about intention. Each small choice moves us closer to the harmony we seek."
+      />
+    </div>
+  </section>
+
+  <BreathingSpace size="md" />
+
+  <!-- Coming Soon -->
+  <section class="container-narrow text-center pb-20">
+    <h2 class="font-display text-xl text-earth mb-4">More Journeys Coming</h2>
+    <p class="text-body-sm text-earth-light max-w-md mx-auto mb-8">
+      We're continuously adding new reflections and guides to The Natural Path.
+      Join our community to receive new journeys as they're published.
+    </p>
+    <a href="/community" class="btn-gentle">
+      Join Our Community
+    </a>
+  </section>
+</BaseLayout>
