@@ -13,13 +13,15 @@ interface Props {
 const {
   title,
   description = 'Welcome to your wellness journey with all natural cat litter. Discover holistic, toxin-free litter solutions that nurture both your cat and your home sanctuary.',
-  ogImage = '/og-image.svg',
+  ogImage = '/og-image.png',
   currentPath = Astro.url.pathname,
 } = Astro.props;
 
 const siteName = 'All Natural Cat Litter';
 const fullTitle = title === 'Home' ? siteName : `${title} | ${siteName}`;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://allnaturalcatlitter.com');
+const siteBase = Astro.site || 'https://allnaturalcatlitter.com';
+const canonicalURL = new URL(Astro.url.pathname, siteBase);
+const ogImageURL = new URL(ogImage, siteBase).toString();
 ---
 
 <!DOCTYPE html>
@@ -41,14 +43,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://allnatur
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={ogImageURL} />
     <meta property="og:site_name" content={siteName} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image" content={ogImageURL} />
 
     <!-- Schema.org -->
     <script is:inline type="application/ld+json" set:html={JSON.stringify({
